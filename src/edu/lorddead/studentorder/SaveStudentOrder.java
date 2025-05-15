@@ -1,28 +1,41 @@
 package edu.lorddead.studentorder;
 
+import edu.lorddead.studentorder.domain.other.Adult;
 import edu.lorddead.studentorder.domain.StudentOrder;
 
-public class SaveStudentOrder
-{
+public class SaveStudentOrder {
     public static void main(String[] args) {
         runAll();
     }
 
     static void runAll() {
-        StudentOrder so = new StudentOrder();
-        so.hFirstName = "Алексей";
-        so.hLastName = "Петров";
-        so.wFirstName = "Галина";
-        so.wLastName = "Петрова";
+        buildStudentOrder();
 
+        /*
+        StudentOrder so = new StudentOrder();
         long ans = saveStudentOrder(so);
         System.out.println(ans);
+        */
     }
 
     static long saveStudentOrder(StudentOrder studentOrder) {
         long answer = 199L;
-        System.out.println("saveStudentOrder: " + studentOrder.hLastName);
+        System.out.println("saveStudentOrder: ");
 
         return answer;
+    }
+
+    static StudentOrder buildStudentOrder() {
+        StudentOrder so = new StudentOrder();
+        Adult husband = new Adult();
+
+        husband.setGivenName("Андрей");
+        husband.setSurName("Петров");
+        husband.setPassportNumber("123456");
+        so.setHusband(husband);
+
+        System.out.println(husband.getPersonString());
+
+        return so;
     }
 }
