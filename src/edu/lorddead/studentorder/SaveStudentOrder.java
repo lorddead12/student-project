@@ -5,17 +5,7 @@ import edu.lorddead.studentorder.domain.StudentOrder;
 
 public class SaveStudentOrder {
     public static void main(String[] args) {
-        runAll();
-    }
-
-    static void runAll() {
         buildStudentOrder();
-
-        /*
-        StudentOrder so = new StudentOrder();
-        long ans = saveStudentOrder(so);
-        System.out.println(ans);
-        */
     }
 
     static long saveStudentOrder(StudentOrder studentOrder) {
@@ -25,16 +15,17 @@ public class SaveStudentOrder {
         return answer;
     }
 
-    static StudentOrder buildStudentOrder() {
+    public static StudentOrder buildStudentOrder() {
         StudentOrder so = new StudentOrder();
+
         Adult husband = new Adult();
 
-        husband.setGivenName("Андрей");
-        husband.setSurName("Петров");
-        husband.setPassportNumber("123456");
-        so.setHusband(husband);
+//        husband.setGivenName("Андрей");
+//        husband.setSurName("Петров");
+//        husband.setPassportNumber("123456");
+//        so.setHusband(husband);
 
-        System.out.println(husband.getPersonString());
+//        System.out.println(husband.getPersonString());
 
         return so;
     }
