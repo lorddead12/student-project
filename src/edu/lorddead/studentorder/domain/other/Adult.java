@@ -13,6 +13,10 @@ public class Adult extends Person {
     private String university;
     private String studentId;
 
+    public Adult() {
+        System.out.println("Adult is created");
+    }
+
     @Override
     public String getPersonString() {
         return super.getPersonString() + " " + passportNumber;
