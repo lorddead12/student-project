@@ -11,11 +11,14 @@ public abstract class Person {
     private Address address;
 
     public Person() {
-        System.out.println("Person is created");
+
     }
 
-    public String getPersonString() {
-        return surName + " " + givenName;
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
+        this.surName = surName;
+        this.givenName = givenName;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public Address getAddress() {

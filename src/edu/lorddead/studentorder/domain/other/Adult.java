@@ -5,7 +5,6 @@ import edu.lorddead.studentorder.domain.Person;
 import java.time.LocalDate;
 
 public class Adult extends Person {
-
     private String passportSerial;
     private String passportNumber;
     private LocalDate issueDate;
@@ -14,12 +13,11 @@ public class Adult extends Person {
     private String studentId;
 
     public Adult() {
-        System.out.println("Adult is created");
+
     }
 
-    @Override
-    public String getPersonString() {
-        return super.getPersonString() + " " + passportNumber;
+    public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
+        super(surName, givenName, patronymic, dateOfBirth);
     }
 
     public String getPassportSerial() {
